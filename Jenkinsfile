@@ -1,6 +1,6 @@
 properties([pipelineTriggers([githubPush()])])
 
-node('linux') {
+node('master') {
     git url: 'https://github.com/giddo4all/infrastructure-pipeline.git', branch: 'master'
     try {
     stage('Test') {
