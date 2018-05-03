@@ -16,7 +16,7 @@ stage ("CreateInstance") {
 } catch (Exception e) {
   currentBuild.result = 'FAILURE'   
 } finally {
-    
+    echo pwd()
     slackSend('#00FFFF' : colorCode, baseUrl : 'https://seis-602-pos-project.slack.com/services/hooks/jenkins-ci/', tokenCredentialId: 'kiwbZmTVIMmWlQUBmay6Ainb', channel: '#symtest', message: "Sent slack message")
 }
         
